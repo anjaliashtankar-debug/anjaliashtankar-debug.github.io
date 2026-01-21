@@ -29,6 +29,7 @@ nav a {
     text-decoration: none;
     color: #3e2c23;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -59,6 +60,11 @@ nav a:hover {
 .hero img {
     width: 350px;
     border-radius: 25px;
+    transition: transform 0.4s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
 }
 
 /* Cards Section */
@@ -75,21 +81,34 @@ nav a:hover {
     width: 30%;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
     width: 100%;
     border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
 }
 
 .card h3 {
     margin-top: 15px;
 }
 
-/* Clickable image effect */
+/* Clickable image & card links */
 .card a {
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 /* About / Contact Section */
@@ -104,12 +123,14 @@ nav a:hover {
 }
 
 /* Form */
-form input, form textarea {
+form input, 
+form textarea {
     width: 300px;
     padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #c9b8a8;
+    font-family: inherit;
 }
 
 form button {
@@ -119,6 +140,11 @@ form button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #5e3621;
 }
 
 /* Footer */
