@@ -1,231 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The Cozy Cup</title>
+<meta charset="UTF-8">
+<title>The Cozy Cup | Home</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4eee6;
-            color: #3e2c23;
-            line-height: 1.8;
-        }
-
-        /* Header */
-        header {
-            background-color: #e6d8c9;
-            padding: 22px 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 34px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #3e2c23;
-            font-weight: 400;
-        }
-
-        nav a:hover {
-            color: #7a4a2e;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 90px 120px;
-        }
-
-        .hero-text {
-            max-width: 520px;
-        }
-
-        .hero-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            color: #5a4638;
-        }
-
-        .hero img {
-            width: 360px;
-            border-radius: 28px;
-        }
-
-        /* Cards Section */
-        .cards {
-            display: flex;
-            gap: 35px;
-            padding: 70px 120px;
-        }
-
-        .card {
-            background-color: #fffaf3;
-            padding: 25px;
-            border-radius: 22px;
-            width: 30%;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 16px;
-        }
-
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            margin-top: 18px;
-            font-size: 22px;
-        }
-
-        .card a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Section */
-        .section {
-            padding: 90px 120px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 38px;
-            margin-bottom: 25px;
-        }
-
-        /* Form */
-        form input, form textarea {
-            width: 320px;
-            padding: 14px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #c9b8a8;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        form button {
-            background-color: #7a4a2e;
-            color: white;
-            padding: 12px 35px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #e6d8c9;
-            text-align: center;
-            padding: 25px;
-            margin-top: 70px;
-            font-size: 14px;
-        }
-    </style>
+<style>
+body{
+    margin:0;
+    font-family:Poppins,sans-serif;
+    background:#f4eee6;
+    color:#3e2c23;
+}
+header{
+    background:#e6d8c9;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+}
+header h1{
+    font-family:'Playfair Display',serif;
+}
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#3e2c23;
+}
+.hero{
+    padding:120px;
+    text-align:center;
+}
+.hero h2{
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>The Cozy Cup ☕</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>The Cozy Cup ☕</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div class="hero-text">
-        <h2>Brewed Fresh,<br>Served Warm</h2>
-        <p>
-            Welcome to The Cozy Cup — a calm and elegant café where every cup is brewed with love.
-        </p>
-    </div>
-    <img src="latte.png.jpeg" alt="Coffee Cup">
+<h2>Brewed Fresh, Served Warm</h2>
+<p>Welcome to The Cozy Cup — your everyday comfort café.</p>
 </section>
-
-<section class="cards">
-    <div class="card">
-        <a href="#about">
-            <img src="latte.png.jpeg" alt="Latte">
-            <h3>Our Coffee</h3>
-            <p>Rich flavors, premium beans.</p>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#contact">
-            <img src="cafe.jpeg" alt="Cafe">
-            <h3>Visit Us</h3>
-            <p>Feel the cozy atmosphere.</p>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#contact">
-            <img src="croissant.jpeg" alt="Croissant">
-            <h3>Feedback</h3>
-            <p>Tell us what you think.</p>
-        </a>
-    </div>
-</section>
-
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-        The Cozy Cup is inspired by warm conversations, soft lighting, and thoughtfully brewed coffee.
-        A place where comfort meets taste.
-    </p>
-</section>
-
-<section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name"><br>
-        <input type="email" placeholder="Your Email"><br>
-        <textarea rows="4" placeholder="Your Feedback"></textarea><br>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    © 2026 The Cozy Cup
-</footer>
 
 </body>
 </html>
+
