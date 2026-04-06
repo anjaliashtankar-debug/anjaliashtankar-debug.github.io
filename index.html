@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-GjDgFGXJ-5BIKayElsJ4o.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
+    <!-- Analytics -->
+    <script async src="https://plausible.io/js/pa-GjDgFGXJ-5BIKayElsJ4o.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="c73df6d5-c3cf-4016-976a-7274ef21d85e"></script>
 
 <meta charset="UTF-8">
 <title>The Cozy Cup | Home</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
@@ -44,8 +43,13 @@ header h1{
     font-size:32px;
 }
 
+nav{
+    display:flex;
+    align-items:center;
+}
+
 nav a{
-    margin-left:25px;
+    margin-left:20px;
     text-decoration:none;
     color:#3e2c23;
     font-weight:500;
@@ -55,7 +59,29 @@ nav a:hover{
     color:#7a4a2e;
 }
 
-/* HERO SECTION */
+/* SEARCH BAR */
+.search-box{
+    margin-left:20px;
+    padding:6px 10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.search-btn{
+    padding:6px 10px;
+    margin-left:5px;
+    border:none;
+    background-color:#7a4a2e;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.search-btn:hover{
+    background-color:#5e3822;
+}
+
+/* HERO */
 .hero{
     display:flex;
     justify-content:space-between;
@@ -83,7 +109,7 @@ nav a:hover{
     box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* CARDS SECTION */
+/* CARDS */
 .cards{
     display:flex;
     gap:30px;
@@ -97,12 +123,11 @@ nav a:hover{
     width:30%;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.12);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    transition:transform 0.3s ease;
 }
 
 .card:hover{
     transform:translateY(-12px);
-    box-shadow:0 18px 35px rgba(0,0,0,0.2);
 }
 
 .card img{
@@ -115,7 +140,7 @@ nav a:hover{
     font-family:'Playfair Display', serif;
 }
 
-/* ABOUT PREVIEW */
+/* SECTION */
 .section{
     padding:80px 100px;
     text-align:center;
@@ -134,27 +159,25 @@ footer{
     padding:22px;
     margin-top:60px;
 }
+
 </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTB7128JZX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GTB7128JZX');
-</script>
 
 <body>
 
 <!-- HEADER -->
 <header>
 <h1>The Cozy Cup ☕</h1>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
+<!-- SEARCH BAR -->
+<input type="text" id="searchBox" class="search-box" placeholder="Search...">
+<button class="search-btn" onclick="searchFunction()">Search</button>
+
 </nav>
 </header>
 
@@ -194,7 +217,7 @@ Step in for handcrafted coffee and calm moments.
 
 </section>
 
-<!-- ABOUT PREVIEW -->
+<!-- ABOUT -->
 <section class="section">
 <h2>Why The Cozy Cup?</h2>
 <p>
@@ -208,7 +231,25 @@ It’s brewed slowly, sipped warmly, and remembered fondly.
 <p>© 2026 The Cozy Cup | Brewed with love ☕</p>
 </footer>
 
+<!-- SEARCH FUNCTION -->
+<script>
+function searchFunction() {
+    let query = document.getElementById("searchBox").value.toLowerCase();
+
+    if(query.includes("coffee")){
+        alert("Showing coffee items ☕");
+    }
+    else if(query.includes("dessert")){
+        alert("Showing desserts 🍰");
+    }
+    else if(query.includes("cafe")){
+        alert("Showing cafe ambience 🪑");
+    }
+    else{
+        alert("No results found for: " + query);
+    }
+}
+</script>
+
 </body>
 </html>
-
-
